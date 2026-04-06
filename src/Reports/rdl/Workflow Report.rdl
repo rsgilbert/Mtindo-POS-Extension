@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="User_ID">
+          <DataField>User_ID</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Name">
+          <DataField>CompanyInfo_Name</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Address">
+          <DataField>CompanyInfo_Address</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Logo">
+          <DataField>CompanyInfo_Logo</DataField>
+        </Field>
+        <Field Name="Document_Type">
+          <DataField>Document_Type</DataField>
+        </Field>
+        <Field Name="User_ID_V2">
+          <DataField>User_ID_V2</DataField>
+        </Field>
+        <Field Name="Approval_Dimension_Code">
+          <DataField>Approval_Dimension_Code</DataField>
+        </Field>
+        <Field Name="Approver_ID">
+          <DataField>Approver_ID</DataField>
+        </Field>
+        <Field Name="Payment_Amount_Approval_Limit">
+          <DataField>Payment_Amount_Approval_Limit</DataField>
+        </Field>
+        <Field Name="Purchase_Amount_Approval_Limit">
+          <DataField>Purchase_Amount_Approval_Limit</DataField>
+        </Field>
+        <Field Name="Request_Amount_Approval_Limit">
+          <DataField>Request_Amount_Approval_Limit</DataField>
+        </Field>
+        <Field Name="Document_Type_Copy">
+          <DataField>Document_Type_Copy</DataField>
+        </Field>
+        <Field Name="User_ID_V2_Copy">
+          <DataField>User_ID_V2_Copy</DataField>
+        </Field>
+        <Field Name="Approval_Dimension_Code_Copy">
+          <DataField>Approval_Dimension_Code_Copy</DataField>
+        </Field>
+        <Field Name="Approver_ID_Copy">
+          <DataField>Approver_ID_Copy</DataField>
+        </Field>
+        <Field Name="Payment_Amount_Approval_Limit_Copy">
+          <DataField>Payment_Amount_Approval_Limit_Copy</DataField>
+        </Field>
+        <Field Name="Purchase_Amount_Approval_Limit_Copy">
+          <DataField>Purchase_Amount_Approval_Limit_Copy</DataField>
+        </Field>
+        <Field Name="Request_Amount_Approval_Limit_Copy">
+          <DataField>Request_Amount_Approval_Limit_Copy</DataField>
+        </Field>
+        <Field Name="Document_Type_Approver3">
+          <DataField>Document_Type_Approver3</DataField>
+        </Field>
+        <Field Name="User_ID_V2_Approver3">
+          <DataField>User_ID_V2_Approver3</DataField>
+        </Field>
+        <Field Name="Approval_Dimension_Code_Approver3">
+          <DataField>Approval_Dimension_Code_Approver3</DataField>
+        </Field>
+        <Field Name="Approver_ID_Approver3">
+          <DataField>Approver_ID_Approver3</DataField>
+        </Field>
+        <Field Name="Payment_Amount_Approval_Limit_Approver3">
+          <DataField>Payment_Amount_Approval_Limit_Approver3</DataField>
+        </Field>
+        <Field Name="Purchase_Amount_Approval_Limit_Approver3">
+          <DataField>Purchase_Amount_Approval_Limit_Approver3</DataField>
+        </Field>
+        <Field Name="Request_Amount_Approval_Limit_Approver3">
+          <DataField>Request_Amount_Approval_Limit_Approver3</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>
